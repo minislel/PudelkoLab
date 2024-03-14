@@ -27,14 +27,25 @@ namespace PudelkoLibrary
         }
 
         public UnitOfMeasure Unit{ get; set; }
-        public Pudelko(double a, double b = 10, double c = 10, UnitOfMeasure unit = UnitOfMeasure.meter) 
+        public Pudelko(double a=0.1, double b = 0.1, double c = 0.1, UnitOfMeasure unit = UnitOfMeasure.meter) 
         {
             
-            if ((unit == UnitOfMeasure.meter && (a > 10 || b > 10 || c > 10)) || (unit == UnitOfMeasure.centimeter && (a>1000 || b>1000 || c>1000)) || (unit == UnitOfMeasure.milimeter && (a>10000 || b>10000 || c>10000)) || a<0 || b<0 || c<0)
+            if ((unit == UnitOfMeasure.meter && (a > 10 || b > 10 || c > 10)) || (unit == UnitOfMeasure.centimeter && (a>1000 || b>1000 || c>1000) || (a<0.1 || b<0.1 || c<0.1)) || (unit == UnitOfMeasure.milimeter && (a>10000 || b>10000 || c>10000)) || a<=0 || b<=0 || c<=0 || (unit == UnitOfMeasure.milimeter && (a<1 || b<1 || c<1)))
             {
                 throw new ArgumentOutOfRangeException();
             }
-            A = a; B = b; C = c; Unit = unit;
+            if (unit == UnitOfMeasure.meter)
+            {
+                A = a; B = b; C = c; Unit = unit;
+            }
+            else if (unit == UnitOfMeasure.centimeter)
+            {
+                A = a / 100; B = b / 100; C = c / 100; Unit = UnitOfMeasure.meter;
+            }
+            else if (unit == UnitOfMeasure.milimeter)
+            { 
+                A= a / 1000; B = b / 1000; C = c / 1000; Unit = UnitOfMeasure.meter;
+            }
 
         }
         public Pudelko((int a, int b, int c) dimensions)
@@ -42,13 +53,6 @@ namespace PudelkoLibrary
         A= dimensions.a; B= dimensions.b; C= dimensions.c;
         Unit = UnitOfMeasure.meter;
         
-        }
-        public Pudelko() 
-        {
-            A = 10;
-            B = 10;
-            C = 10;
-            Unit = UnitOfMeasure.centimeter;
         }
         public override string ToString()
         {
@@ -102,10 +106,10 @@ namespace PudelkoLibrary
             {
                 case UnitOfMeasure.meter:
                     if (Unit == UnitOfMeasure.milimeter)
-                    { return value / 1000; }
-                    else if (Unit == UnitOfMeasure.centimeter)
+                        { return value / 1000; }
+                        else if (Unit == UnitOfMeasure.centimeter)
 
-                    { return value / 100; }
+                        { return value / 100; }
                     else return value;
                 case UnitOfMeasure.centimeter:
                     if (Unit == UnitOfMeasure.meter) { return value * 100; }
