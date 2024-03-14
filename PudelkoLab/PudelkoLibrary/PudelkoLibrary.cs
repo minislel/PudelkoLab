@@ -5,10 +5,27 @@ namespace PudelkoLibrary
 {
     public class Pudelko
     {
-        public double A { get; set; }
-        public double B { get; set; }
-        public double C { get; set; }
-        
+        private double[] dimensions = new double[3]; 
+
+        public double A { get { return dimensions[0]; } set { dimensions[0] = value; } }
+        public double B { get { return dimensions[1]; } set { dimensions[1] = value; } }
+        public double C { get { return dimensions[2]; } set { dimensions[2] = value; } }
+        public double this[int index]
+        {
+            get
+            {
+                if (index < 0 || index >= dimensions.Length)
+                    throw new IndexOutOfRangeException("Index is out of range.");
+                return dimensions[index];
+            }
+            set
+            {
+                if (index < 0 || index >= dimensions.Length)
+                    throw new IndexOutOfRangeException("Index is out of range.");
+                dimensions[index] = value;
+            }
+        }
+
         public UnitOfMeasure Unit{ get; set; }
         public Pudelko(double a, double b = 10, double c = 10, UnitOfMeasure unit = UnitOfMeasure.meter) 
         {
@@ -20,6 +37,12 @@ namespace PudelkoLibrary
             A = a; B = b; C = c; Unit = unit;
 
         }
+        public Pudelko((int a, int b, int c) dimensions)
+        { 
+        A= dimensions.a; B= dimensions.b; C= dimensions.c;
+        Unit = UnitOfMeasure.meter;
+        
+        }
         public Pudelko() 
         {
             A = 10;
@@ -29,12 +52,18 @@ namespace PudelkoLibrary
         }
         public override string ToString()
         {
-            return $"{A} {Unit} × {B} {Unit} × {C} {Unit}";
+            return ToString("m");
         }
         public static explicit operator double[](Pudelko pudelko)
         {
             return new double[] { pudelko.A, pudelko.B, pudelko.C };
         }
+        public static implicit operator Pudelko((int a, int b, int c) dimensions)
+        {
+            return new Pudelko(dimensions.a, dimensions.b, dimensions.c, UnitOfMeasure.milimeter);
+        }
+
+
         public static UnitOfMeasure alias(string value)
         {
             switch (value)
@@ -44,11 +73,11 @@ namespace PudelkoLibrary
                 case "mm": return UnitOfMeasure.milimeter;
                 default: throw new FormatException();
             }
-
-
         }
+        
         public string ToString(string format)
         {
+            if (format == null) {format = "m";}
             UnitOfMeasure unitFormat = alias(format);
 
             double aConverted = ConvertToUnit(A, unitFormat);
@@ -57,7 +86,7 @@ namespace PudelkoLibrary
             switch (unitFormat)
             {
                 case UnitOfMeasure.meter:
-                    return $"{aConverted:0.000} {format} × {bConverted:0.000} {format} × {cConverted:0.000} {format}";
+                    return $"{aConverted:0.000} m × {bConverted:0.000} m × {cConverted:0.000} m";
                 case UnitOfMeasure.centimeter:
                     return $"{aConverted:0.0} {format} × {bConverted:0.0} {format} × {cConverted:0.0} {format}";
                 case UnitOfMeasure.milimeter:
@@ -79,7 +108,7 @@ namespace PudelkoLibrary
                     { return value / 100; }
                     else return value;
                 case UnitOfMeasure.centimeter:
-                    if (Unit == UnitOfMeasure.meter) { return value / 100; }
+                    if (Unit == UnitOfMeasure.meter) { return value * 100; }
                     else if (Unit == UnitOfMeasure.milimeter) { return value * 10; }
                     else return value ;
                 case UnitOfMeasure.milimeter:
@@ -90,5 +119,13 @@ namespace PudelkoLibrary
                     throw new ArgumentException("Invalid unit format.");
             }
         }
+        public IEnumerator<double> GetEnumerator()
+        {
+            foreach (var dimension in dimensions)
+            {
+                yield return dimension;
+            }
+        }
+       
     }
 }
