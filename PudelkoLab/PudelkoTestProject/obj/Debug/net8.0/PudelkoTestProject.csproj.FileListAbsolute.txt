@@ -1,0 +1,7 @@
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoTestProject\bin\Debug\net8.0\CoverletSourceRootsMapping_PudelkoTestProject
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoTestProject\obj\Debug\net8.0\PudelkoTestProject.csproj.AssemblyReference.cache
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoTestProject\obj\Debug\net8.0\PudelkoTestProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoTestProject\obj\Debug\net8.0\PudelkoTestProject.AssemblyInfoInputs.cache
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoTestProject\obj\Debug\net8.0\PudelkoTestProject.AssemblyInfo.cs
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoTestProject\obj\Debug\net8.0\PudelkoTestProject.csproj.CoreCompileInputs.cache
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoTestProject\obj\Debug\net8.0\PudelkoTestProject.sourcelink.json

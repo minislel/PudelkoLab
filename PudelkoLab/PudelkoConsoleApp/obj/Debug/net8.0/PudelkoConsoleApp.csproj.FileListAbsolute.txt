@@ -1,0 +1,15 @@
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoConsoleApp\bin\Debug\net8.0\PudelkoConsoleApp.exe
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoConsoleApp\bin\Debug\net8.0\PudelkoConsoleApp.deps.json
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoConsoleApp\bin\Debug\net8.0\PudelkoConsoleApp.runtimeconfig.json
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoConsoleApp\bin\Debug\net8.0\PudelkoConsoleApp.dll
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoConsoleApp\bin\Debug\net8.0\PudelkoConsoleApp.pdb
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoConsoleApp\obj\Debug\net8.0\PudelkoConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoConsoleApp\obj\Debug\net8.0\PudelkoConsoleApp.AssemblyInfoInputs.cache
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoConsoleApp\obj\Debug\net8.0\PudelkoConsoleApp.AssemblyInfo.cs
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoConsoleApp\obj\Debug\net8.0\PudelkoConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoConsoleApp\obj\Debug\net8.0\PudelkoConsoleApp.sourcelink.json
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoConsoleApp\obj\Debug\net8.0\PudelkoConsoleApp.dll
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoConsoleApp\obj\Debug\net8.0\refint\PudelkoConsoleApp.dll
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoConsoleApp\obj\Debug\net8.0\PudelkoConsoleApp.pdb
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoConsoleApp\obj\Debug\net8.0\PudelkoConsoleApp.genruntimeconfig.cache
+C:\Users\SkutecznieUse\Desktop\PudelkoLab\PudelkoLab\PudelkoConsoleApp\obj\Debug\net8.0\ref\PudelkoConsoleApp.dll
