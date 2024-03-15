@@ -98,6 +98,14 @@ namespace PudelkoLibrary
         {
             return new Pudelko(dimensions.a, dimensions.b, dimensions.c, UnitOfMeasure.milimeter);
         }
+        public bool Equals(Pudelko b, Pudelko d)
+        {
+            Pudelko pudelko1 = new Pudelko(b.A, b.B, b.C, b.Unit);
+            Pudelko pudelko2 = new Pudelko(d.A, d.B, d.C, d.Unit);
+            if (pudelko1.A==pudelko2.A && pudelko1.B==pudelko2.B && pudelko1.C==pudelko2.C)
+                { return true; }
+            else { return false; }
+        }
 
 
         public static UnitOfMeasure alias(string value)
