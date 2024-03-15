@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PudelkoLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b64f2dbbcaf97bebcb5ca49430935f36ad2f0ef2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92a9145cc49817c05111865754645e7862ae9f2e")]
 [assembly: System.Reflection.AssemblyProductAttribute("PudelkoLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PudelkoLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

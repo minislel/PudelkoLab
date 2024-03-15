@@ -5,11 +5,13 @@ namespace PudelkoLibrary
 {
     public class Pudelko
     {
-        private double[] dimensions = new double[3]; 
+        private readonly double[] dimensions = new double[3];
 
-        public double A { get { return dimensions[0]; } set { dimensions[0] = value; } }
-        public double B { get { return dimensions[1]; } set { dimensions[1] = value; } }
-        public double C { get { return dimensions[2]; } set { dimensions[2] = value; } }
+        public double A => dimensions[0];
+        public double B => dimensions[1];
+        public double C => dimensions[2];
+        public double Objetosc => Math.Round(A*B*C, 9);
+        public double Pole => Math.Round((A * B*2)+(A*C*2)+(B*C*2),6);
         public double this[int index]
         {
             get
@@ -27,32 +29,62 @@ namespace PudelkoLibrary
         }
 
         public UnitOfMeasure Unit{ get; set; }
-        public Pudelko(double a=0.1, double b = 0.1, double c = 0.1, UnitOfMeasure unit = UnitOfMeasure.meter) 
+        public Pudelko(double? a=null , double? b = null, double? c = null, UnitOfMeasure unit = UnitOfMeasure.meter) 
         {
-            
             if ((unit == UnitOfMeasure.meter && (a > 10 || b > 10 || c > 10)) || (unit == UnitOfMeasure.centimeter && (a>1000 || b>1000 || c>1000) || (a<0.1 || b<0.1 || c<0.1)) || (unit == UnitOfMeasure.milimeter && (a>10000 || b>10000 || c>10000)) || a<=0 || b<=0 || c<=0 || (unit == UnitOfMeasure.milimeter && (a<1 || b<1 || c<1)))
-            {
-                throw new ArgumentOutOfRangeException();
-            }
-            if (unit == UnitOfMeasure.meter)
-            {
-                A = a; B = b; C = c; Unit = unit;
-            }
-            else if (unit == UnitOfMeasure.centimeter)
-            {
-                A = a / 100; B = b / 100; C = c / 100; Unit = UnitOfMeasure.meter;
-            }
-            else if (unit == UnitOfMeasure.milimeter)
-            { 
-                A= a / 1000; B = b / 1000; C = c / 1000; Unit = UnitOfMeasure.meter;
-            }
+                        {
+                            throw new ArgumentOutOfRangeException();
+                        }
+
+            Unit = unit;
+                        if (unit == UnitOfMeasure.meter)
+                        {
+                            if (!a.HasValue)
+                            { dimensions[0] = 0.1; }
+                            else { dimensions[0] = a.Value; }
+                            if (!b.HasValue)
+                            { dimensions[1] = 0.1; }
+                            else { dimensions[1] = b.Value; }
+                            if (!c.HasValue)
+                            { dimensions[2] = 0.1; }
+                            else { dimensions[2] = c.Value; }
+
+                        }
+                        else if (unit == UnitOfMeasure.centimeter)
+                        {
+                            if (!a.HasValue)
+                            { dimensions[0] = 0.1; }
+                            else { dimensions[0] = a.Value/100; }
+                            if (!b.HasValue)
+                            { dimensions[1] = 0.1; }
+                            else { dimensions[1] = b.Value / 100; }
+                            if (!c.HasValue)
+                            { dimensions[2] = 0.1; }
+                            else { dimensions[2] = c.Value/100; }
+                            Unit = UnitOfMeasure.meter;
+                        }
+                        else if (unit == UnitOfMeasure.milimeter)
+                        {
+                            if (!a.HasValue)
+                            { dimensions[0] = 0.1; }
+                            else { dimensions[0] = a.Value / 1000; }
+                            if (!b.HasValue)
+                            { dimensions[1] = 0.1; }
+                            else { dimensions[1] = b.Value / 1000; }
+                            if (!c.HasValue)
+                            { dimensions[2] = 0.1; }
+                            else { dimensions[2] = c.Value / 1000; }
+                            Unit = UnitOfMeasure.meter;
+                        }
 
         }
-        public Pudelko((int a, int b, int c) dimensions)
-        { 
-        A= dimensions.a; B= dimensions.b; C= dimensions.c;
+
+
+        public Pudelko((int a, int b, int c) dimensionss)
+        {
+
+            dimensions[0]= dimensionss.a; dimensions[1]= dimensionss.b; dimensions[2]= dimensionss.c;
         Unit = UnitOfMeasure.meter;
-        
         }
         public override string ToString()
         {
@@ -105,20 +137,11 @@ namespace PudelkoLibrary
             switch (unitFormat)
             {
                 case UnitOfMeasure.meter:
-                    if (Unit == UnitOfMeasure.milimeter)
-                        { return value / 1000; }
-                        else if (Unit == UnitOfMeasure.centimeter)
-
-                        { return value / 100; }
-                    else return value;
+                    return value;
                 case UnitOfMeasure.centimeter:
-                    if (Unit == UnitOfMeasure.meter) { return value * 100; }
-                    else if (Unit == UnitOfMeasure.milimeter) { return value * 10; }
-                    else return value ;
+                    return value*100 ;
                 case UnitOfMeasure.milimeter:
-                    if (Unit == UnitOfMeasure.meter) { return value * 1000; }
-                    else if (Unit == UnitOfMeasure.centimeter) { return value * 10; }
-                    else return value;
+                    return value*1000;
                 default:
                     throw new ArgumentException("Invalid unit format.");
             }

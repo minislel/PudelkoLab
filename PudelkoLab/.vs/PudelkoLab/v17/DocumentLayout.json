@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{2EFDCFC2-85FE-434B-A1A8-677A02E5DA1F}|PudelkoLibrary\\PudelkoLibrary.csproj|solutionrelative:pudelkolibrary\\pudelkolibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EFDCFC2-85FE-434B-A1A8-677A02E5DA1F}|PudelkoLibrary\\PudelkoLibrary.csproj|c:\\users\\skutecznieuse\\desktop\\pudelkolab\\pudelkolab\\pudelkolibrary\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EFDCFC2-85FE-434B-A1A8-677A02E5DA1F}|PudelkoLibrary\\PudelkoLibrary.csproj|solutionrelative:pudelkolibrary\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FEC48B1D-000E-4E5C-B1E0-0CED4D50CE0D}|PudelkoTestProject\\PudelkoTestProject.csproj|c:\\users\\skutecznieuse\\desktop\\pudelkolab\\pudelkolab\\pudelkotestproject\\pudelkotestproject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FEC48B1D-000E-4E5C-B1E0-0CED4D50CE0D}|PudelkoTestProject\\PudelkoTestProject.csproj|solutionrelative:pudelkotestproject\\pudelkotestproject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FEC48B1D-000E-4E5C-B1E0-0CED4D50CE0D}|PudelkoTestProject\\PudelkoTestProject.csproj|c:\\users\\skutecznieuse\\desktop\\pudelkolab\\pudelkolab\\pudelkotestproject\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FEC48B1D-000E-4E5C-B1E0-0CED4D50CE0D}|PudelkoTestProject\\PudelkoTestProject.csproj|solutionrelative:pudelkotestproject\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEC48B1D-000E-4E5C-B1E0-0CED4D50CE0D}|PudelkoTestProject\\PudelkoTestProject.csproj|c:\\users\\skutecznieuse\\desktop\\pudelkolab\\pudelkolab\\pudelkotestproject\\pudelkotestproject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FEC48B1D-000E-4E5C-B1E0-0CED4D50CE0D}|PudelkoTestProject\\PudelkoTestProject.csproj|solutionrelative:pudelkotestproject\\pudelkotestproject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{2EFDCFC2-85FE-434B-A1A8-677A02E5DA1F}|PudelkoLibrary\\PudelkoLibrary.csproj|c:\\users\\skutecznieuse\\desktop\\pudelkolab\\pudelkolab\\pudelkolibrary\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EFDCFC2-85FE-434B-A1A8-677A02E5DA1F}|PudelkoLibrary\\PudelkoLibrary.csproj|solutionrelative:pudelkolibrary\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F297738F-2079-4C1A-BED2-C0473EBD10C0}|PudelkoConsoleApp\\PudelkoConsoleApp.csproj|c:\\users\\skutecznieuse\\desktop\\pudelkolab\\pudelkolab\\pudelkoconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "PudelkoLibrary\\PudelkoLibrary.cs",
               "ToolTip": "C:\\Users\\SkutecznieUse\\Desktop\\PudelkoLab\\PudelkoLab\\PudelkoLibrary\\PudelkoLibrary.cs",
               "RelativeToolTip": "PudelkoLibrary\\PudelkoLibrary.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAIwCMAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-14T14:52:21.348Z",
               "EditorCaption": ""
@@ -53,14 +53,14 @@
               "RelativeDocumentMoniker": "PudelkoTestProject\\UnitTest1.cs",
               "ToolTip": "C:\\Users\\SkutecznieUse\\Desktop\\PudelkoLab\\PudelkoLab\\PudelkoTestProject\\UnitTest1.cs",
               "RelativeToolTip": "PudelkoTestProject\\UnitTest1.cs",
-              "ViewState": "AQIAAJ8AAAAAAAAAAAAtwLcAAAARAAAA",
+              "ViewState": "AQIAAJMAAAAAAAAAAAAnwKQAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-14T14:55:16.457Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\SkutecznieUse\\Desktop\\PudelkoLab\\PudelkoLab\\PudelkoLibrary\\Class1.cs",
               "RelativeDocumentMoniker": "PudelkoLibrary\\Class1.cs",
@@ -73,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "PudelkoTestProject.csproj",
               "DocumentMoniker": "C:\\Users\\SkutecznieUse\\Desktop\\PudelkoLab\\PudelkoLab\\PudelkoTestProject\\PudelkoTestProject.csproj",
               "RelativeDocumentMoniker": "PudelkoTestProject\\PudelkoTestProject.csproj",
@@ -81,7 +81,8 @@
               "RelativeToolTip": "PudelkoTestProject\\PudelkoTestProject.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-14T15:06:59.449Z"
+              "WhenOpened": "2024-03-14T15:06:59.449Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
