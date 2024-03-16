@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PudelkoConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+784e9988b7e409d714582d5d50a28648cfc60ecb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3677481aa5a39bebcdbd2f302e222b270fef1337")]
 [assembly: System.Reflection.AssemblyProductAttribute("PudelkoConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PudelkoConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

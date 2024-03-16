@@ -3,8 +3,9 @@
 namespace PudelkoLibrary
     
 {
-    public class Pudelko
+    public class Pudelko : IEquatable<Pudelko>
     {
+        
         private readonly double[] dimensions = new double[3];
 
         public double A => dimensions[0];
@@ -98,14 +99,34 @@ namespace PudelkoLibrary
         {
             return new Pudelko(dimensions.a, dimensions.b, dimensions.c, UnitOfMeasure.milimeter);
         }
-        public bool Equals(Pudelko b, Pudelko d)
+        /*        public bool Equals(Pudelko b, Pudelko d)
+                {
+                    Pudelko pudelko1 = new Pudelko(b.A, b.B, b.C, b.Unit);
+                    Pudelko pudelko2 = new Pudelko(d.A, d.B, d.C, d.Unit);
+                    if (pudelko1.A==pudelko2.A && pudelko1.B==pudelko2.B && pudelko1.C==pudelko2.C)
+                        { return true; }
+                    else { return false; }
+                }*/
+        public override int GetHashCode()
         {
-            Pudelko pudelko1 = new Pudelko(b.A, b.B, b.C, b.Unit);
-            Pudelko pudelko2 = new Pudelko(d.A, d.B, d.C, d.Unit);
-            if (pudelko1.A==pudelko2.A && pudelko1.B==pudelko2.B && pudelko1.C==pudelko2.C)
-                { return true; }
-            else { return false; }
+            return HashCode.Combine(A, B, C, Unit);
         }
+
+        public override bool Equals(object? obj)
+        {
+            return Equals(obj as Pudelko);
+        }
+        public bool Equals(Pudelko? other)
+        {
+            if (other == null)
+                return false;
+
+            if (this.A == other.A && this.B == other.B && this.C == other.C)
+                return true;
+            else
+                return false;
+        }
+
 
 
         public static UnitOfMeasure alias(string value)
@@ -154,6 +175,8 @@ namespace PudelkoLibrary
                     throw new ArgumentException("Invalid unit format.");
             }
         }
+       
+        
         public IEnumerator<double> GetEnumerator()
         {
             foreach (var dimension in dimensions)
@@ -161,6 +184,5 @@ namespace PudelkoLibrary
                 yield return dimension;
             }
         }
-       
     }
 }
