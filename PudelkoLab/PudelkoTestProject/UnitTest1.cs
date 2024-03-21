@@ -2,6 +2,7 @@
 using PudelkoLibrary;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Globalization;
 using System.Security.Cryptography;
 using System.Threading;
@@ -488,7 +489,31 @@ namespace PudelkoUnitTests
         #endregion
 
         #region Equals ===========================================
-        // ToDo
+        [TestMethod, TestCategory("EqualsTest")]
+        [DataRow(null, 1, 1, 1, null, 1, 1, 1)]
+        [DataRow(UnitOfMeasure.centimeter, 1, 1, 1, UnitOfMeasure.centimeter, 1, 1, 1)]
+        [DataRow(UnitOfMeasure.milimeter, 2000, 2000, 2000, UnitOfMeasure.meter, 2, 2, 2)]
+        [DataRow(UnitOfMeasure.milimeter, 1234, 4567, 7890, UnitOfMeasure.meter, 1.234, 4.567, 7.890)]
+        public void EqualsTestTrue(UnitOfMeasure format, double a, double b, double c, UnitOfMeasure format2, double a2, double b2, double c2)
+        {
+            var p1 = new Pudelko(a, b, c, format);
+            var p2 = new Pudelko(a2, b2, c2, format2);
+            Assert.IsTrue(p1.Equals(p2));
+        }
+        [TestMethod, TestCategory("EqualsTest")]
+        [DataRow(null, 1, 1, 1, null, 1, 4, 1)]
+        [DataRow(UnitOfMeasure.centimeter, 2, 1, 1, UnitOfMeasure.centimeter, 1, 1, 1)]
+        [DataRow(UnitOfMeasure.milimeter, 2600, 2000, 2000, UnitOfMeasure.meter, 2, 2, 2)]
+        [DataRow(UnitOfMeasure.milimeter, 1254, 4567, 7890, UnitOfMeasure.meter, 1.234, 4.567, 7.890)]
+        public void EqualsTestFalse(UnitOfMeasure format, double a, double b, double c, UnitOfMeasure format2, double a2, double b2, double c2)
+        {
+            var p1 = new Pudelko(a, b, c, format);
+            var p2 = new Pudelko(a2, b2, c2, format2);
+            Assert.IsFalse(p1.Equals(p2));
+        }
+
+
+
         #endregion
 
         #region Operators overloading ===========================

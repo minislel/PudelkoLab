@@ -1,26 +1,50 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "PudelkoLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/PudelkoLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PudelkoLibrary.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "PudelkoLibrary/1.0.0": {
+      "type": "project",
+      "path": "../PudelkoLibrary/PudelkoLibrary.csproj",
+      "msbuildProject": "../PudelkoLibrary/PudelkoLibrary.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "PudelkoLibrary >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "D:\\Users\\marcin.swiderski\\.nuget\\packages\\": {}
+    "C:\\Users\\SkutecznieUse\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\marcin.swiderski\\Desktop\\PudelkoLab\\PudelkoLab\\PudelkoConsoleApp\\PudelkoConsoleApp.csproj",
+      "projectUniqueName": "C:\\Users\\SkutecznieUse\\Desktop\\studia\\PudelkoLab\\PudelkoLab\\PudelkoConsoleApp\\PudelkoConsoleApp.csproj",
       "projectName": "PudelkoConsoleApp",
-      "projectPath": "D:\\Users\\marcin.swiderski\\Desktop\\PudelkoLab\\PudelkoLab\\PudelkoConsoleApp\\PudelkoConsoleApp.csproj",
-      "packagesPath": "D:\\Users\\marcin.swiderski\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\marcin.swiderski\\Desktop\\PudelkoLab\\PudelkoLab\\PudelkoConsoleApp\\obj\\",
+      "projectPath": "C:\\Users\\SkutecznieUse\\Desktop\\studia\\PudelkoLab\\PudelkoLab\\PudelkoConsoleApp\\PudelkoConsoleApp.csproj",
+      "packagesPath": "C:\\Users\\SkutecznieUse\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SkutecznieUse\\Desktop\\studia\\PudelkoLab\\PudelkoLab\\PudelkoConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "D:\\Users\\marcin.swiderski\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\SkutecznieUse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,12 +52,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\SkutecznieUse\\Desktop\\studia\\PudelkoLab\\PudelkoLab\\PudelkoLibrary\\PudelkoLibrary.csproj": {
+              "projectPath": "C:\\Users\\SkutecznieUse\\Desktop\\studia\\PudelkoLab\\PudelkoLab\\PudelkoLibrary\\PudelkoLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -66,7 +95,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

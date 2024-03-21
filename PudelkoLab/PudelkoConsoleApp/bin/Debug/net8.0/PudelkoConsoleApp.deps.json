@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "PudelkoConsoleApp/1.0.0": {
+        "dependencies": {
+          "PudelkoLibrary": "1.0.0"
+        },
         "runtime": {
           "PudelkoConsoleApp.dll": {}
+        }
+      },
+      "PudelkoLibrary/1.0.0": {
+        "runtime": {
+          "PudelkoLibrary.dll": {}
         }
       }
     }
   },
   "libraries": {
     "PudelkoConsoleApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PudelkoLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

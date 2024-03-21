@@ -22,3 +22,15 @@ D:\Users\marcin.swiderski\Desktop\PudelkoLab\PudelkoLab\PudelkoLibrary\obj\Debug
 D:\Users\marcin.swiderski\Desktop\PudelkoLab\PudelkoLab\PudelkoLibrary\obj\Debug\net8.0\refint\PudelkoLibrary.dll
 D:\Users\marcin.swiderski\Desktop\PudelkoLab\PudelkoLab\PudelkoLibrary\obj\Debug\net8.0\PudelkoLibrary.pdb
 D:\Users\marcin.swiderski\Desktop\PudelkoLab\PudelkoLab\PudelkoLibrary\obj\Debug\net8.0\ref\PudelkoLibrary.dll
+C:\Users\SkutecznieUse\Desktop\studia\PudelkoLab\PudelkoLab\PudelkoLibrary\bin\Debug\net8.0\PudelkoLibrary.deps.json
+C:\Users\SkutecznieUse\Desktop\studia\PudelkoLab\PudelkoLab\PudelkoLibrary\bin\Debug\net8.0\PudelkoLibrary.dll
+C:\Users\SkutecznieUse\Desktop\studia\PudelkoLab\PudelkoLab\PudelkoLibrary\bin\Debug\net8.0\PudelkoLibrary.pdb
+C:\Users\SkutecznieUse\Desktop\studia\PudelkoLab\PudelkoLab\PudelkoLibrary\obj\Debug\net8.0\PudelkoLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SkutecznieUse\Desktop\studia\PudelkoLab\PudelkoLab\PudelkoLibrary\obj\Debug\net8.0\PudelkoLibrary.AssemblyInfoInputs.cache
+C:\Users\SkutecznieUse\Desktop\studia\PudelkoLab\PudelkoLab\PudelkoLibrary\obj\Debug\net8.0\PudelkoLibrary.AssemblyInfo.cs
+C:\Users\SkutecznieUse\Desktop\studia\PudelkoLab\PudelkoLab\PudelkoLibrary\obj\Debug\net8.0\PudelkoLibrary.csproj.CoreCompileInputs.cache
+C:\Users\SkutecznieUse\Desktop\studia\PudelkoLab\PudelkoLab\PudelkoLibrary\obj\Debug\net8.0\PudelkoLibrary.sourcelink.json
+C:\Users\SkutecznieUse\Desktop\studia\PudelkoLab\PudelkoLab\PudelkoLibrary\obj\Debug\net8.0\PudelkoLibrary.dll
+C:\Users\SkutecznieUse\Desktop\studia\PudelkoLab\PudelkoLab\PudelkoLibrary\obj\Debug\net8.0\refint\PudelkoLibrary.dll
+C:\Users\SkutecznieUse\Desktop\studia\PudelkoLab\PudelkoLab\PudelkoLibrary\obj\Debug\net8.0\PudelkoLibrary.pdb
+C:\Users\SkutecznieUse\Desktop\studia\PudelkoLab\PudelkoLab\PudelkoLibrary\obj\Debug\net8.0\ref\PudelkoLibrary.dll
