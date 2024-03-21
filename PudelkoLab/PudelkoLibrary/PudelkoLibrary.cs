@@ -28,7 +28,7 @@ namespace PudelkoLibrary
         public UnitOfMeasure Unit{ get; set; }
         public Pudelko(double? a=null , double? b = null, double? c = null, UnitOfMeasure unit = UnitOfMeasure.meter) 
         {
-            if ((unit == UnitOfMeasure.meter && (a > 10 || b > 10 || c > 10)) || (unit == UnitOfMeasure.centimeter && (a>1000 || b>1000 || c>1000) || (a<0.1 || b<0.1 || c<0.1)) || (unit == UnitOfMeasure.milimeter && (a>10000 || b>10000 || c>10000)) || a<=0 || b<=0 || c<=0 || (unit == UnitOfMeasure.milimeter && (a<1 || b<1 || c<1)))
+            if ((unit == UnitOfMeasure.meter && (a > 10 || b > 10 || c > 10)) || (unit == UnitOfMeasure.centimeter && (a>1000 || b>1000 || c>1000) || (a<0.1 || b<0.1 || c<0.1)) || (unit == UnitOfMeasure.milimeter && (a>10000 || b>10000 || c>10000)) || (unit == UnitOfMeasure.milimeter && (a<1 || b<1 || c<1)))
             {
                 throw new ArgumentOutOfRangeException();
             }
@@ -147,7 +147,6 @@ namespace PudelkoLibrary
         public static Pudelko Parse(string s)
         {
             string[] parts = s.Split(" ");
-
             if (s.Contains(" m ×"))
             {
                 return new Pudelko(double.Parse(parts[0]), double.Parse(parts[3]), double.Parse(parts[6]), UnitOfMeasure.meter);
@@ -212,8 +211,6 @@ namespace PudelkoLibrary
                 yield return dimension;
             }
         }
-
-
         public static int Compare(Pudelko? one, Pudelko? other)
         {
             if (one.Objetosc > other.Objetosc)
@@ -236,8 +233,6 @@ namespace PudelkoLibrary
                 }
             }
             return 0;
-
         }
-
     }
 }
