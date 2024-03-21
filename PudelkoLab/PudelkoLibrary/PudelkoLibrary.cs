@@ -3,7 +3,7 @@
 namespace PudelkoLibrary
     
 {
-    public class Pudelko : IEquatable<Pudelko>
+    public sealed class Pudelko : IEquatable<Pudelko>
     {
         
         private readonly double[] dimensions = new double[3];
@@ -153,11 +153,7 @@ namespace PudelkoLibrary
                 return new Pudelko(double.Parse(parts[0]), double.Parse(parts[3]), double.Parse(parts[6]), UnitOfMeasure.milimeter);
             }
             else throw new ArgumentException();
-
         }
-
-
-
 
         public static UnitOfMeasure alias(string value)
         {
@@ -169,7 +165,7 @@ namespace PudelkoLibrary
                 default: throw new FormatException();
             }
         }
-        
+    
         public string ToString(string format)
         {
             if (format == null) {format = "m";}

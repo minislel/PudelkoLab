@@ -3,6 +3,7 @@ using PudelkoLibrary;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Security.Cryptography;
 using System.Threading;
 
 namespace PudelkoUnitTests
@@ -468,6 +469,19 @@ namespace PudelkoUnitTests
         {
             var p = new Pudelko(a, b, c, format);
             Assert.AreEqual(expectedPole, p.Pole);
+        }
+        [TestMethod, TestCategory("LaczeniePudelek")]
+        [DataRow(null, 1, 5, 4, null, 1,1,1, null, 2,5,4)]
+        [DataRow(UnitOfMeasure.milimeter, 2000, 2000, 2000, UnitOfMeasure.centimeter, 20, 100, 52, null, 2.2, 2, 2)]
+        [DataRow(UnitOfMeasure.centimeter, 12.5, 54.3, 426.4, null, 4, 4, 0.4, null, 4.125, 4, 4.264)]
+        [DataRow(UnitOfMeasure.meter, 4, 5.32, 9.4, UnitOfMeasure.centimeter, 300, 200, 59, null, 7, 5.32, 9.4)]
+        public void LaczenieTest(UnitOfMeasure format, double a, double b, double c, UnitOfMeasure format2, double a2, double b2, double c2, UnitOfMeasure format3, double a3, double b3, double c3)
+        {
+            var p1 = new Pudelko(a, b, c, format);
+            var p2 = new Pudelko(a2, b2, c2, format2);
+            var p3 = new Pudelko(a3, b3, c3, format3 );
+            p1 = p1 + p2;
+            Assert.AreEqual(p1, p3);
         }
 
 
