@@ -99,14 +99,6 @@ namespace PudelkoLibrary
         {
             return new Pudelko(dimensions.a, dimensions.b, dimensions.c, UnitOfMeasure.milimeter);
         }
-        /*        public bool Equals(Pudelko b, Pudelko d)
-                {
-                    Pudelko pudelko1 = new Pudelko(b.A, b.B, b.C, b.Unit);
-                    Pudelko pudelko2 = new Pudelko(d.A, d.B, d.C, d.Unit);
-                    if (pudelko1.A==pudelko2.A && pudelko1.B==pudelko2.B && pudelko1.C==pudelko2.C)
-                        { return true; }
-                    else { return false; }
-                }*/
         public override int GetHashCode()
         {
             return HashCode.Combine(A, B, C, Unit);
@@ -144,6 +136,26 @@ namespace PudelkoLibrary
             double newC = obj1.C > obj2.C ? obj1.C : obj2.C;
             return new Pudelko(newA, newB, newC);
         }
+        public static Pudelko Parse(string s)
+        {
+            string[] parts = s.Split(" ");
+
+            if (s.Contains(" m ×"))
+            {
+                return new Pudelko(double.Parse(parts[0]), double.Parse(parts[3]), double.Parse(parts[6]), UnitOfMeasure.meter);
+            }
+            if (s.Contains(" cm ×"))
+            {
+                return new Pudelko(double.Parse(parts[0]), double.Parse(parts[3]), double.Parse(parts[6]), UnitOfMeasure.centimeter);
+            }
+            if (s.Contains(" mm ×"))
+            {
+                return new Pudelko(double.Parse(parts[0]), double.Parse(parts[3]), double.Parse(parts[6]), UnitOfMeasure.milimeter);
+            }
+            else throw new ArgumentException();
+
+        }
+
 
 
 
