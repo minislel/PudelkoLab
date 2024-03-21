@@ -447,7 +447,29 @@ namespace PudelkoUnitTests
 
 
         #region Pole, Objętość ===================================
-        // ToDo
+        [TestMethod, TestCategory("Pole, objetosc")]
+        [DataRow(null, 1, 5, 4, 20)]
+        [DataRow(UnitOfMeasure.milimeter, 2000, 2000, 2000, 8)]
+        [DataRow(UnitOfMeasure.milimeter, 2130, 7053, 9999, 150.21387711)]
+        [DataRow(UnitOfMeasure.centimeter, 12.5, 54.3, 426.4, 0.289419)]
+        [DataRow(UnitOfMeasure.meter, 4, 5.32, 9.4, 200.032)]
+        public void ObjetoscTest(UnitOfMeasure format, double a, double b, double c, double expectedObjetosc)
+        {
+            var p = new Pudelko(a, b, c, format);
+            Assert.AreEqual(expectedObjetosc, p.Objetosc);
+        }
+        [TestMethod, TestCategory("Pole, objetosc")]
+        [DataRow(null, 1, 5, 4, 58)]
+        [DataRow(UnitOfMeasure.milimeter, 2000, 2000, 2000, 24)]
+        [DataRow(UnitOfMeasure.centimeter, 12.5, 54.3, 426.4, 5.832454)]
+        [DataRow(UnitOfMeasure.meter, 4, 5.32, 9.4, 217.77600)]
+
+        public void PoleTest(UnitOfMeasure format, double a, double b, double c, double expectedPole)
+        {
+            var p = new Pudelko(a, b, c, format);
+            Assert.AreEqual(expectedPole, p.Pole);
+        }
+
 
         #endregion
 
