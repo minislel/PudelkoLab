@@ -137,6 +137,13 @@ namespace PudelkoLibrary
             return obj1.Equals(obj2);
         }
         public static bool operator !=(Pudelko obj1, Pudelko obj2) => !(obj1 == obj2);
+        public static Pudelko operator +(Pudelko obj1, Pudelko obj2)
+        {
+            double newA = obj1.A + obj2.A;
+            double newB = obj1.B > obj2.B ? obj1.B : obj2.B;
+            double newC = obj1.C > obj2.C ? obj1.C : obj2.C;
+            return new Pudelko(newA, newB, newC);
+        }
 
 
 
