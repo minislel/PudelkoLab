@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PudelkoTestProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+104c71fd3457a1cc93eb15a94a9f65a21e9ae809")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab827a9b84cfdb7f03b9bd0e44a956bf2191dcb1")]
 [assembly: System.Reflection.AssemblyProductAttribute("PudelkoTestProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PudelkoTestProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
