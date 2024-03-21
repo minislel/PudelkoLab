@@ -1013,19 +1013,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\marci\\.nuget\\packages\\": {}
+    "D:\\Users\\marcin.swiderski\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marci\\OneDrive\\Pulpit\\projekty studia\\PudelkoLab\\PudelkoLab\\PudelkoTestProject\\PudelkoTestProject.csproj",
+      "projectUniqueName": "D:\\Users\\marcin.swiderski\\Desktop\\PudelkoLab\\PudelkoLab\\PudelkoTestProject\\PudelkoTestProject.csproj",
       "projectName": "PudelkoTestProject",
-      "projectPath": "C:\\Users\\marci\\OneDrive\\Pulpit\\projekty studia\\PudelkoLab\\PudelkoLab\\PudelkoTestProject\\PudelkoTestProject.csproj",
-      "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marci\\OneDrive\\Pulpit\\projekty studia\\PudelkoLab\\PudelkoLab\\PudelkoTestProject\\obj\\",
+      "projectPath": "D:\\Users\\marcin.swiderski\\Desktop\\PudelkoLab\\PudelkoLab\\PudelkoTestProject\\PudelkoTestProject.csproj",
+      "packagesPath": "D:\\Users\\marcin.swiderski\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\marcin.swiderski\\Desktop\\PudelkoLab\\PudelkoLab\\PudelkoTestProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\marci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "D:\\Users\\marcin.swiderski\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1039,8 +1039,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\marci\\OneDrive\\Pulpit\\projekty studia\\PudelkoLab\\PudelkoLab\\PudelkoLibrary\\PudelkoLibrary.csproj": {
-              "projectPath": "C:\\Users\\marci\\OneDrive\\Pulpit\\projekty studia\\PudelkoLab\\PudelkoLab\\PudelkoLibrary\\PudelkoLibrary.csproj"
+            "D:\\Users\\marcin.swiderski\\Desktop\\PudelkoLab\\PudelkoLab\\PudelkoLibrary\\PudelkoLibrary.csproj": {
+              "projectPath": "D:\\Users\\marcin.swiderski\\Desktop\\PudelkoLab\\PudelkoLab\\PudelkoLibrary\\PudelkoLibrary.csproj"
             }
           }
         }
@@ -1093,7 +1093,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

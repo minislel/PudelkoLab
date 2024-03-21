@@ -118,7 +118,7 @@ namespace PudelkoLibrary
         }
         public bool Equals(Pudelko? other)
         {
-            if (other == null)
+            if (other is null)
                 return false;
 
             if (this.A == other.A && this.B == other.B && this.C == other.C)
@@ -126,6 +126,17 @@ namespace PudelkoLibrary
             else
                 return false;
         }
+        public static bool operator ==(Pudelko obj1, Pudelko obj2)
+        {
+            if (Equals(obj1, obj2))
+                return true;
+            if (Equals(obj1, null))
+                return false;
+            if (Equals(obj2, null))
+                return false;
+            return obj1.Equals(obj2);
+        }
+        public static bool operator !=(Pudelko obj1, Pudelko obj2) => !(obj1 == obj2);
 
 
 
