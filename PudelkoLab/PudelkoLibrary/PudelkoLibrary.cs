@@ -1,4 +1,5 @@
-﻿using System.Reflection.Metadata.Ecma335;
+﻿using System.Globalization;
+using System.Reflection.Metadata.Ecma335;
 
 namespace PudelkoLibrary
 {
@@ -149,15 +150,24 @@ namespace PudelkoLibrary
             string[] parts = s.Split(" ");
             if (s.Contains(" m ×"))
             {
-                return new Pudelko(double.Parse(parts[0]), double.Parse(parts[3]), double.Parse(parts[6]), UnitOfMeasure.meter);
+                double newa = double.Parse(parts[0], CultureInfo.InvariantCulture);
+                double newb = double.Parse(parts[3], CultureInfo.InvariantCulture);
+                double newc = double.Parse(parts[6], CultureInfo.InvariantCulture);
+                return new Pudelko(newa, newb, newc, UnitOfMeasure.meter);
             }
             if (s.Contains(" cm ×"))
             {
-                return new Pudelko(double.Parse(parts[0]), double.Parse(parts[3]), double.Parse(parts[6]), UnitOfMeasure.centimeter);
+                double newa = double.Parse(parts[0], CultureInfo.InvariantCulture);
+                double newb = double.Parse(parts[3], CultureInfo.InvariantCulture);
+                double newc = double.Parse(parts[6], CultureInfo.InvariantCulture);
+                return new Pudelko(newa, newb, newc, UnitOfMeasure.centimeter);
             }
             if (s.Contains(" mm ×"))
             {
-                return new Pudelko(double.Parse(parts[0]), double.Parse(parts[3]), double.Parse(parts[6]), UnitOfMeasure.milimeter);
+                double newa = double.Parse(parts[0], CultureInfo.InvariantCulture);
+                double newb = double.Parse(parts[3], CultureInfo.InvariantCulture);
+                double newc = double.Parse(parts[6], CultureInfo.InvariantCulture);
+                return new Pudelko(newa, newb, newc, UnitOfMeasure.milimeter);
             }
             else throw new ArgumentException();
         }
