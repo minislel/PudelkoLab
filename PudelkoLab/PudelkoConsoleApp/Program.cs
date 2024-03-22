@@ -61,8 +61,9 @@ namespace PudelkoConsoleApp
             Console.WriteLine(pudelko2.ToString("mm"));
             Pudelko pudelkoKompresja8 = pudelko8.Kompresuj();
             Console.WriteLine("\nSkompresowane pudelko 8: " + pudelkoKompresja8);
-            Pudelko parsedPudelko = Pudelko.Parse("3.500 m × 4.200 m × 5.600 m");
-            Console.WriteLine("\nParsowanie pudelka ze stringa: \nString wejsciowy: "+ "3.5 m × 4.2 m × 5.6 m\n" + "Sparsowany obiekt.toString(): "+ parsedPudelko);
+            string toParse = "3.500 m × 4.200 m × 5.600 m";
+            Pudelko parsedPudelko = Pudelko.Parse(toParse);
+            Console.WriteLine("\nParsowanie pudelka ze stringa: \nString wejsciowy: "+ toParse + "\nSparsowany obiekt.toString(): "+ parsedPudelko);
 
 
 
