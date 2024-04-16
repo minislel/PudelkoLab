@@ -1,16 +1,17 @@
-﻿using System.Globalization;
+﻿using System.Collections;
+using System.Globalization;
 using System.Reflection.Metadata.Ecma335;
 
 namespace PudelkoLibrary
 {
-    public sealed class Pudelko : IEquatable<Pudelko>
+    public sealed class Pudelko : IEquatable<Pudelko>, IEnumerable
     {
         private readonly double[] dimensions = new double[3];
         public double A => dimensions[0];
         public double B => dimensions[1];
         public double C => dimensions[2];
-        public double Objetosc => Math.Round(A*B*C, 9);
-        public double Pole => Math.Round((A * B*2)+(A*C*2)+(B*C*2),6);
+        public double Objetosc => Math.Round(A * B * C, 9);
+        public double Pole => Math.Round((A * B * 2) + (A * C * 2) + (B * C * 2), 6);
         public double this[int index]
         {
             get
@@ -19,17 +20,17 @@ namespace PudelkoLibrary
                     throw new IndexOutOfRangeException("Index is out of range.");
                 return dimensions[index];
             }
-            set
+            private set
             {
                 if (index < 0 || index >= dimensions.Length)
                     throw new IndexOutOfRangeException("Index is out of range.");
                 dimensions[index] = value;
             }
         }
-        public UnitOfMeasure Unit{ get; set; }
-        public Pudelko(double? a=null , double? b = null, double? c = null, UnitOfMeasure unit = UnitOfMeasure.meter) 
+        public UnitOfMeasure Unit { get; private set; }
+        public Pudelko(double? a = null, double? b = null, double? c = null, UnitOfMeasure unit = UnitOfMeasure.meter)
         {
-            if ((unit == UnitOfMeasure.meter && (a > 10 || b > 10 || c > 10)) || (unit == UnitOfMeasure.centimeter && (a>1000 || b>1000 || c>1000) || (a<0.1 || b<0.1 || c<0.1)) || (unit == UnitOfMeasure.milimeter && (a>10000 || b>10000 || c>10000)) || (unit == UnitOfMeasure.milimeter && (a<1 || b<1 || c<1)))
+            if ((unit == UnitOfMeasure.meter && (a > 10 || b > 10 || c > 10)) || (unit == UnitOfMeasure.centimeter && (a > 1000 || b > 1000 || c > 1000) || (a < 0.1 || b < 0.1 || c < 0.1)) || (unit == UnitOfMeasure.milimeter && (a > 10000 || b > 10000 || c > 10000)) || (unit == UnitOfMeasure.milimeter && (a < 1 || b < 1 || c < 1)))
             {
                 throw new ArgumentOutOfRangeException();
             }
@@ -51,13 +52,13 @@ namespace PudelkoLibrary
             {
                 if (!a.HasValue)
                 { dimensions[0] = 0.1; }
-                else { dimensions[0] = a.Value/100; }
+                else { dimensions[0] = a.Value / 100; }
                 if (!b.HasValue)
                 { dimensions[1] = 0.1; }
                 else { dimensions[1] = b.Value / 100; }
                 if (!c.HasValue)
                 { dimensions[2] = 0.1; }
-                else { dimensions[2] = c.Value/100; }
+                else { dimensions[2] = c.Value / 100; }
                 Unit = UnitOfMeasure.meter;
             }
             else if (unit == UnitOfMeasure.milimeter)
@@ -76,7 +77,7 @@ namespace PudelkoLibrary
         }
         public Pudelko((int a, int b, int c) dimensionss)
         {
-            dimensions[0]= dimensionss.a; dimensions[1]= dimensionss.b; dimensions[2]= dimensionss.c;
+            dimensions[0] = dimensionss.a; dimensions[1] = dimensionss.b; dimensions[2] = dimensionss.c;
             Unit = UnitOfMeasure.meter;
         }
         public override string ToString()
@@ -183,7 +184,7 @@ namespace PudelkoLibrary
         }
         public string ToString(string format)
         {
-            if (format == null) {format = "m";}
+            if (format == null) { format = "m"; }
             UnitOfMeasure unitFormat = alias(format);
             double aConverted = ConvertToUnit(A, unitFormat);
             double bConverted = ConvertToUnit(B, unitFormat);
@@ -207,9 +208,9 @@ namespace PudelkoLibrary
                 case UnitOfMeasure.meter:
                     return value;
                 case UnitOfMeasure.centimeter:
-                    return value*100 ;
+                    return value * 100;
                 case UnitOfMeasure.milimeter:
-                    return value*1000;
+                    return value * 1000;
                 default:
                     throw new ArgumentException("Invalid unit format.");
             }
@@ -223,6 +224,10 @@ namespace PudelkoLibrary
         }
         public static int Compare(Pudelko? one, Pudelko? other)
         {
+            if (one is null ||  other is null)
+            {
+                throw new ArgumentNullException();
+            }
             if (one.Objetosc > other.Objetosc)
             {return 1;}
             else if (one.Objetosc < other.Objetosc)
@@ -243,6 +248,11 @@ namespace PudelkoLibrary
                 }
             }
             return 0;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
