@@ -517,7 +517,7 @@ namespace PudelkoUnitTests
         #endregion
 
         #region Operators overloading ===========================
-        // ToDo
+
         #endregion
 
         #region Conversions =====================================
@@ -535,7 +535,7 @@ namespace PudelkoUnitTests
         [TestMethod]
         public void ImplicitConversion_FromAalueTuple_As_Pudelko_InMilimeters()
         {
-            var (a, b, c) = (2500, 9321, 100); // in milimeters, ValueTuple
+            var (a, b, c) = (2500, 9321, 100);
             Pudelko p = (a, b, c);
             Assert.AreEqual((int)(p.A * 1000), a);
             Assert.AreEqual((int)(p.B * 1000), b);
@@ -570,6 +570,39 @@ namespace PudelkoUnitTests
         #endregion
 
         #region Parsing =========================================
+
+        [TestMethod, TestCategory("Parsing")]
+        public void Parse_FromString_InMeters()
+        {
+            string input = "2.5 m × 3.2 m × 4.7 m";
+            var expected = new Pudelko(2.5, 3.2, 4.7, UnitOfMeasure.meter);
+
+            var result = Pudelko.Parse(input);
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod, TestCategory("Parsing")]
+        public void Parse_FromString_InCentimeters()
+        {
+            string input = "250 cm × 320 cm × 470 cm";
+            var expected = new Pudelko(2.5, 3.2, 4.7, UnitOfMeasure.meter);
+
+            var result = Pudelko.Parse(input);
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod, TestCategory("Parsing")]
+        public void Parse_FromString_InMilimeters()
+        {
+            string input = "2500 mm × 3200 mm × 4700 mm";
+            var expected = new Pudelko(2.5, 3.2, 4.7, UnitOfMeasure.meter);
+
+            var result = Pudelko.Parse(input);
+
+            Assert.AreEqual(expected, result);
+        }
 
         #endregion
 
